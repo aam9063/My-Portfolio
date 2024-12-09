@@ -1,0 +1,136 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import Angular from "./icons/Angular.astro";
+import Csharp from "./icons/Csharp.astro";
+import Javascript from "./icons/Javascript.astro";
+import Typescript from "./icons/Typescript.astro";
+import LinkButton from "./LinkButton.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-red-600 text-white",
+    icon: Angular,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-blue-700 text-white",
+    icon: Csharp,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow",
+    icon: Javascript,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-blue-400 text-white",
+    icon: Typescript,
+  },
+};
+const PROJECTS = [
+  {
+    title: "DogWalk App - Encuentra al cuidador de perros perfecto!",
+    description:
+      "App para encontrar paseadores de perros. Creada con Angular 16 con TypeScript, C# con .NET 7.0 y Entity Framework y Tailwind CSS.",
+    link: "https://github.com/aam9063/DogWalkApp-Frontend-",
+    github: "https://github.com/aam9063/DogWalkApp_Backend",
+    image: "/projects/1.PNG",
+    tags: [TAGS.ANGULAR, TAGS.CSHARP, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+  },
+  {
+    title: "Snake Game",
+    description:
+      "Juego de la serpiente creado con JavaScript con ExpressJS Tailwind CSS. ¡Juega ahora!",
+    github: "https://github.com/aam9063/Snake-Game/tree/main",
+    image: "/projects/snake.jpg",
+
+    tags: [TAGS.JAVASCRIPT, TAGS.TAILWIND],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+          
+           
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+          
+        </div>
+      </article>
+    ))
+  }
+</div>
+
+<div class="flex mt-20 text-xl items-center">
+  <span>...Más Proyectos en mi</span>
+  <a
+    href="https://github.com/aam9063"
+    class="ml-1 text-blue-600 hover:text-blue-800 transition-colors duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    GitHub
+  </a>
+</div>
