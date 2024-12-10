@@ -4,6 +4,7 @@ import Badge from "../components/Badge.astro"
 import LinkedInIcon from "../components/icons/LinkedIn.astro"
 import GitHubIcon from "../components/icons/GitHub.astro"
 import MailIcon from "../components/icons/Mail.astro"
+import CurriculumIcon from "../components/icons/Curriculum.astro"
 import SocialPill from "../components/SocialPill.astro"
 ---
 
@@ -46,6 +47,10 @@ import SocialPill from "../components/SocialPill.astro"
     <SocialPill href="https://www.linkedin.com/in/albert-alarcón-martínez-04044a51">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="/path/to/your/curriculum.pdf" download>
+      <CurriculumIcon class="size-4" />
+      Currículum
     </SocialPill>
   </nav>
 </div>
