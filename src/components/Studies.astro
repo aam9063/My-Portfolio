@@ -1,0 +1,40 @@
+---
+import StudiesItem from "./StudiesItem.astro"
+const STUDIES = [
+  {
+    date: "Actualmente y desde 2023...",
+    title: "Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web",
+    company: "I.E.S. Mutxamel",
+    description:
+      "Cursando 2º Curso de Desarrollo de Aplicaciones Web.",
+    link: "",
+  },
+  {
+    date: "2008 - 2014",
+    title: "Grado en Biología",
+    company: "Universidad de Alicante",
+    description:
+      "",
+    link: "",
+  },
+  {
+    date: "2006-2008",
+    title: "Bachillerato de Ciencias de la Salud",
+    company: "Colegio San Agustín de Alicante",
+    description:
+      "",
+    link: "",
+  },
+ 
+]
+---
+
+<ol class="relative mt-16">
+  {
+    STUDIES.map((experience) => (
+      <li class="">
+        <StudiesItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
