@@ -8,6 +8,7 @@ import Csharp from "./icons/Csharp.astro";
 import Javascript from "./icons/Javascript.astro";
 import Typescript from "./icons/Typescript.astro";
 import LinkButton from "./LinkButton.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
 
 const TAGS = {
   NEXT: {
@@ -40,16 +41,21 @@ const TAGS = {
     class: "bg-blue-400 text-white",
     icon: Typescript,
   },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-purple-600 text-white",
+    icon: Bootstrap,
+  },
 };
 const PROJECTS = [
   {
     title: "DogWalk App - Encuentra al cuidador de perros perfecto!",
     description:
-      "App para encontrar paseadores de perros. Creada con Angular 16 con TypeScript, C# con .NET 7.0 y Entity Framework y Tailwind CSS.",
+      "App para encontrar paseadores de perros. Creada con Angular 16 con TypeScript, C# con .NET 7.0 y Entity Framework y Bootstrap.",
     link: "https://github.com/aam9063/DogWalkApp-Frontend-",
     github: "https://github.com/aam9063/DogWalkApp_Backend",
     image: "/projects/2.PNG",
-    tags: [TAGS.ANGULAR, TAGS.CSHARP, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    tags: [TAGS.ANGULAR, TAGS.CSHARP, TAGS.TYPESCRIPT, TAGS.BOOTSTRAP],
   },
   {
     title: "Landing-Portfolio-NextJS",
@@ -63,7 +69,7 @@ const PROJECTS = [
   {
     title: "Ecommerce-NextJS",
     description:
-      "Ecommerce creado con NextJS y Tailwind CSS.",
+      "Ecommerce creado con NextJS, Prisma, PostgreSQL y Tailwind CSS.",
     link: "https://github.com/aam9063/Ecommerce-NextJS",
     github: "https://github.com/aam9063/Ecommerce-NextJS",
     image: "/projects/ecommerce.png",
