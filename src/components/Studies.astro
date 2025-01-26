@@ -1,5 +1,6 @@
 ---
 import StudiesItem from "./StudiesItem.astro"
+import AnimatedSection from "./AnimatedSection.astro"
 const STUDIES = [
   {
     date: "Actualmente y desde 2023...",
@@ -29,12 +30,14 @@ const STUDIES = [
 ]
 ---
 
-<ol class="relative mt-16">
-  {
-    STUDIES.map((experience) => (
-      <li class="">
-        <StudiesItem {...experience} />
-      </li>
-    ))
-  }
-</ol>
+<AnimatedSection>
+  <ol class="relative mt-16">
+    {
+      STUDIES.map((experience) => (
+        <li class="">
+          <StudiesItem {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+</AnimatedSection>

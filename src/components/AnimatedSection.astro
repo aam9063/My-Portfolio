@@ -1,0 +1,15 @@
+---
+import { motion } from "framer-motion";
+
+const { class: className } = Astro.props;
+---
+
+<motion.div
+  client:load
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.9 }}
+  className={className}
+>
+  <slot />
+</motion.div> 
