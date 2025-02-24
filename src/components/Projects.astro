@@ -10,7 +10,7 @@ import Typescript from "./icons/Typescript.astro";
 import LinkButton from "./LinkButton.astro";
 import Bootstrap from "./icons/Bootstrap.astro";
 import React from "./icons/React.astro";
-import AnimatedSection from "./AnimatedSection.astro"
+import AnimatedSection from "./AnimatedSection.astro";
 
 const TAGS = {
   NEXT: {
@@ -75,6 +75,15 @@ const PROJECTS = [
     tags: [TAGS.ANGULAR, TAGS.TYPESCRIPT],
   },
   {
+    title: "Ecommerce - React + Tailwind CSS",
+    description:
+      "Proyecto de Ecommerce desarrollado con React, Tailwind CSS, Framer-Motion y Swiper. Se ha utilizado la API de Fake API de Platzi.",
+    link: "https://shopireact.netlify.app/",
+    github: "https://github.com/aam9063/Shopi-React",
+    image: "/projects/shopi.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
     title: "Landing-Portfolio-NextJS",
     description:
       "Landing page de un ejemplo de portfolio creado con NextJS y Tailwind CSS.",
@@ -103,14 +112,12 @@ const PROJECTS = [
   },
   {
     title: "Clon de Spotify",
-    description:
-      "Clon de Spotify creado con Astro,React, Tailwind CSS.",
+    description: "Clon de Spotify creado con Astro,React, Tailwind CSS.",
     link: "https://github.com/aam9063/Spotify-Clone",
     github: "https://github.com/aam9063/Spotify-Clone",
     image: "/projects/sptf.jpg",
     tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
   },
-  
 ];
 ---
 
@@ -151,8 +158,7 @@ const PROJECTS = [
               <div class="mt-2 text-gray-700 dark:text-gray-400">
                 {description}
               </div>
-            
-             
+
               <footer class="flex items-end justify-start mt-4 gap-x-4">
                 {github && (
                   <LinkButton href={github}>
@@ -168,7 +174,6 @@ const PROJECTS = [
                 )}
               </footer>
             </div>
-            
           </div>
         </article>
       ))
